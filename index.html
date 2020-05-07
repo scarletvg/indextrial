@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ben Davis Art</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" contents="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <div class="bgimg bgimg-1">
+
+       <div class="header">
+    <h1>Ben Davis Art</h1>
+    </div>
+   
+    <div class="bgimg bgimg-2">
+    
+        </div>
+    </div>
+
+<!--
+    <div class="header">
+    <h1>Ben Davis Art</h1>
+    </div>
+-->
+
+
+<!--Navigation Bar: Fixed at top when scrolling-->
+    <div id="nav">
+           <a href="index.html">Home</a>
+           <a href="about.html">About</a>
+           <a href="artwork.html">Gallery</a>
+           <a href="shop.html">Shop</a>
+           <a href="portfolio.html">Projects</a>
+    </div>
+    
+    
+    
+<!--Hamburger Menu-->
+<nav class="topnav" id="mainlinks">
+    <img class="logo" src="images/A_Sailors_Delight.jpg">
+    <a href="index.html"><h2>Home</h2></a>
+    <a href="about.html"><h2>About</h2></a>
+    <a href="artwork.html"><h2>Gallery</h2></a>
+    <a href="shop.html"><h2>Shop</h2></a>
+    <a href="portfolio.html"><h2>Projects</h2></a>
+    <a href="javasript:void(0);" style="font-size:3.5vw;" class="icon" onclick="myFunction()">&#127828;</a>
+    
+</nav>
+
+
+
+<!--Slideshow-->
+<div class="carousel-box">
+    <div class="mySlides fade">
+         <img src="images/If%20We%20Could%20Rewrite%20the%20Stars.jpg" style="width:100%">
+         <div class="text">If We Could Rewrite the Stars</div>
+     </div>   
+ 
+    <div class="mySlides fade">
+         <img src="images/Starship%20Capitola.jpg" style="width:100%">
+         <div class="text">Starships Capitola</div>
+     </div>  
+     
+     <div class="mySlides fade">
+         <img src="images/Title%20Unknown.jpg" style="width:100%">
+         <div class="text">Title Unknown</div>
+     </div>  
+     
+      <div class="mySlides fade">
+         <img src="images/West_Cliff_image.png" style="width:100%">
+         <div class="text">West Cliff</div>
+     </div> 
+     
+      <div class="mySlides fade">
+         <img src="images/Moon_Light_Sonata_image.png"style="width:100%">
+         <div class="text">Moon Light Sonata</div>
+     </div> 
+     
+      <div class="mySlides fade">
+         <img src="images/Portriai_Of_An_Artist_On_Roller_Skates.jpg" style="width:100%">
+         <div class="text">Portrait Of An Artist On Roller Skates</div>
+     </div> 
+ 
+  <div class="mySlides fade">
+         <img src="images/The%20Canvas%20Can%20Do%20Miracles_image.png" style="width:100%">
+         <div class="text">The Canvas Can Do Miracles</div>
+     </div> 
+ <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+ <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br />
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+    <span class="dot" onclick="currentSlide(6)"></span> 
+    <span class="dot" onclick="currentSlide(7)"></span> 
+</div>
+
+<!--Current, Past, All Projects Section-->
+    <div class="projects">
+  <div class="section" style="background-image: url(images/A_Sailors_Delight.jpg)">
+    <h2 class="projtitle">Gallery</h2>
+    <p></p>
+        <div class="button">
+            <a href="gallery.html">View</a>
+        </div>
+  </div>
+  <div class="section" style="background-image:url(images/Escape_From_Beigeland.jpg)">
+    <h2 class="projtitle">Shop</h2>
+    <p></p>
+        <div class="button">
+            <a href="shop.html">View</a>
+        </div>
+  </div>
+  <div class="section" style="background-image:url(images/Wine_With_A_Great_Bouquet.jpg)">
+    <h2 class="projtitle">All Projects</h2>
+    <p></p>
+        <div class="button">
+            <a href="allprojects.html">View</a>
+        </div>
+  </div>
+</div>
+    <p></p>
+
+<script>
+    /** Script to keep Navigation Bar: Fixed **/
+//    window.onscroll = function() {
+//        myFunction()
+//    };
+//
+//    var navbar = document.getElementById("nav");
+//    var sticky = navbar.offsetTop;
+//
+//    function myFunction() {
+//        if (window.pageYOffset >= sticky) {
+//            navbar.classList.add("navstick")
+//        } else {
+//            navbar.classList.remove("navstick");
+//        }
+//    }
+    /** Slideshow Script **/
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex=slides.length} for (i=0; i < slides.length; i++) { slides[i].style.display="none" ; } for (i=0; i < dots.length; i++) { dots[i].className=dots[i].className.replace(" active", "" ); } slides[slideIndex-1].style.display="block" ; dots[slideIndex-1].className +=" active" ; }
+
+/**Hambuerger Menu Script**/
+    function myfunction (){
+        var x = document.getElementById("mainlinks");
+        if (x.classname === "topnav") {
+            x.classname += "responsive";
+        } else{
+            x.classname = "topnav";
+        }
+    }
+    
+    
+</script>
+</body>
